@@ -23,3 +23,16 @@ let pokemonList = [
         types: ['flying', 'normal'] 
     }
 ]
+
+// 'for' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
+// than 16, it will also add the 'highlightNote' variable.
+
+let highlightNote = " -Wow that's big!";
+
+for(i=0; i < pokemonList.length; i++) {
+        
+    if(pokemonList[i].height >= 16){
+        document.write(pokemonList[i].name +' (height:'+ pokemonList[i].height +')' + `${highlightNote}` +'<br>');
+    }
+    else{document.write(pokemonList[i].name +' (height:'+ pokemonList[i].height +')' + '<br>');}
+}
