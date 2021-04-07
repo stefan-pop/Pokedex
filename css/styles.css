@@ -23,7 +23,9 @@ body {
     height: 20vh;
     background-color: #fff;
     color: rgb(34, 33, 33);
-    font-size: 32px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
 }
 
 }
