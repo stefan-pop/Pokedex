@@ -24,6 +24,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 10px 10px;
     height: 20vh;
     background-color: rgb(245, 240, 240);
     color: rgb(34, 33, 33);
