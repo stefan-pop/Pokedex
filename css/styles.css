@@ -20,6 +20,10 @@ body {
 }
 
 .pokemon-list li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 20vh;
     background-color: rgb(245, 240, 240);
     color: rgb(34, 33, 33);
