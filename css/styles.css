@@ -39,3 +39,8 @@ body {
     border-bottom: none;
 }
 
+@media all and (max-width: 550px) {
+    .pokemon-list li {
+        font-size: 22px;
+    }
+}
