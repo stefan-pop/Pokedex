@@ -2,25 +2,22 @@ let pokemonList = [
     {
         name: 'Bulbasaur',
         height: 7,
-        types: ['grass', 'posion']
+        types: ['grass','posion']
     },
-
     {
         name: 'Weedle',
         height: 3,
-        types: ['bug', 'poison']
+        types: ['bug','poison']
     },
-    
     {
         name: 'Golbat',
         height: 16,
-        types: ['poison', 'flying']
+        types: ['poison','flying']
     },
-
     {
         name: 'Doduo',
         height: 14,
-        types: ['flying', 'normal'] 
+        types: ['flying','normal'] 
     }
 ]
 
@@ -30,7 +27,6 @@ let pokemonList = [
 let highlightNote = " -Wow that's big!";
 
 for(i=0; i < pokemonList.length; i++) {
-        
     if(pokemonList[i].height >= 16){
         document.write(pokemonList[i].name +' (height:'+ pokemonList[i].height +')' + `${highlightNote}` +'<br>');
     }
