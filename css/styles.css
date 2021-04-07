@@ -20,3 +20,11 @@ body {
     text-align: center;
 }
 
+.pokemon-list li {
+    border-bottom: 1px solid black;
+    height: 20vh;
+    background-color: #fff;
+    color: rgb(34, 33, 33);
+    font-size: 32px;
+}
+
