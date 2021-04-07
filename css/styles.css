@@ -21,7 +21,7 @@ body {
 
 .pokemon-list li {
     height: 20vh;
-    background-color: #fff;
+    background-color: rgb(245, 240, 240);
     color: rgb(34, 33, 33);
     border-radius: 10px;
     font-size: 18px;
