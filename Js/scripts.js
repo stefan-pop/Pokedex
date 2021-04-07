@@ -29,9 +29,9 @@ let highlightNote = " -Wow that's big!";
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 for(i=0; i < pokemonList.length; i++) {
     if(pokemonList[i].height >= 16){
-        document.write('<li>'+pokemonList[i].name +' (height:'+ pokemonList[i].height +')' + `${highlightNote}`+ '</li>');
+        document.write('<li>'+'<h1>'+ pokemonList[i].name +'</h1>' + '<p>' + ' Height: '+ pokemonList[i].height +  `${highlightNote}`+ '</p>' + '</li>');
     }else{
-        document.write('<li>' + pokemonList[i].name +' (height:'+ pokemonList[i].height +')' +'</li>');
+        document.write('<li>'+'<h1>' + pokemonList[i].name +'</h1>' + '<p>' +' Height: '+ pokemonList[i].height + '</p>' +'</li>');
     }
 }
 document.write('</ul');  // closed the </ul> here so that it will wrap all the <li> elements
