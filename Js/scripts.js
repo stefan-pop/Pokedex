@@ -7,6 +7,10 @@ let pokemonRepository = (function() {
     ]
 
     function add(pokemon) {
+        if( typeof(pokemon) !== 'object') {
+            alert('Please insert an object');
+            pokemon = null;
+        }
         pokemonList.push(pokemon);
     }
 
