@@ -24,13 +24,15 @@ let pokemonRepository = (function() {
     }
 })();
 
-// 'forEach' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
-// than 16, it will also add the 'highlightNote' variable.
+
 
 let highlightNote = " -Wow that's big!";
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
+
+// 'forEach' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
+// than 16, it will also add the 'highlightNote' variable.
 pokemonRepository.getAll().forEach(function(item) {
     if(item.height >= 16){
         document.write('<li>'+'<h1>'+ item.name +'</h1>' + '<p>' + ' Height: '+ item.height +  `${highlightNote}`+ '</p>' + '</li>');
@@ -38,4 +40,13 @@ pokemonRepository.getAll().forEach(function(item) {
         document.write('<li>'+'<h1>' + item.name +'</h1>' + '<p>' +' Height: '+ item.height + '</p>' +'</li>');
     }
 })
+
+pokemonRepository.getAll().filter(function(item) { // Filter function that returns the pokemon filtered by name.
+    if( searchPokemon === item.name) {
+        return document.write('<li>'+'<h1>' + item.name +'</h1>' + '<p>' +' Height: '+ item.height + '</p>' +'</li>');
+    }
+})
+
 document.write('</ul');  // closed the </ul> here so that it will wrap all the <li> elements
+
+
