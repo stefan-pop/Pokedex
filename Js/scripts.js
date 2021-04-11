@@ -27,6 +27,7 @@ let pokemonRepository = (function() {
 
 
 let highlightNote = " -Wow that's big!";
+let searchPokemon = ''; //  <<-- Enter a name of a Pokemon form the list.
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
