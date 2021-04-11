@@ -21,17 +21,18 @@ let pokemonList = [
     }
 ]
 
-// 'for' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
+// 'forEach' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
 // than 16, it will also add the 'highlightNote' variable.
 
 let highlightNote = " -Wow that's big!";
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
-for(i=0; i < pokemonList.length; i++) {
-    if(pokemonList[i].height >= 16){
-        document.write('<li>'+'<h1>'+ pokemonList[i].name +'</h1>' + '<p>' + ' Height: '+ pokemonList[i].height +  `${highlightNote}`+ '</p>' + '</li>');
+
+pokemonList.forEach(function(item) {
+    if(item.height >= 16){
+        document.write('<li>'+'<h1>'+ item.name +'</h1>' + '<p>' + ' Height: '+ item.height +  `${highlightNote}`+ '</p>' + '</li>');
     }else{
-        document.write('<li>'+'<h1>' + pokemonList[i].name +'</h1>' + '<p>' +' Height: '+ pokemonList[i].height + '</p>' +'</li>');
+        document.write('<li>'+'<h1>' + item.name +'</h1>' + '<p>' +' Height: '+ item.height + '</p>' +'</li>');
     }
-}
+})
 document.write('</ul');  // closed the </ul> here so that it will wrap all the <li> elements
