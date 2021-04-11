@@ -27,7 +27,7 @@ let highlightNote = " -Wow that's big!";
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
-pokemonList.forEach(function(item) {
+pokemonRepository.getAll().forEach(function(item) {
     if(item.height >= 16){
         document.write('<li>'+'<h1>'+ item.name +'</h1>' + '<p>' + ' Height: '+ item.height +  `${highlightNote}`+ '</p>' + '</li>');
     }else{
