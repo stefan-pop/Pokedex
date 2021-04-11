@@ -25,7 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     margin: 10px 10px;
-    height: 20vh;
+    min-height: 150px;
     background-color: rgb(245, 240, 240);
     color: rgb(34, 33, 33);
     border-radius: 10px;
