@@ -11,7 +11,10 @@ let pokemonRepository = (function() {
             let pokeomnProperties = Object.keys(pokemon);
             if( pokeomnProperties.includes('name', 0) && pokeomnProperties.includes('height', 1)){
                 pokemonList.push(pokemon);
+                console.log('Pokemon successfully added');
             }
+        }else{
+            console.warn("The pokemon couldn't be added ! Please insert an object with both the 'name' and the 'height' of the pokemon in this order.");
         }    
     }
 
@@ -29,6 +32,7 @@ let pokemonRepository = (function() {
 // than 16, it will also add the 'highlightNote' variable.
 
 let highlightNote = " -Wow that's big!";
+pokemonRepository.add({name: 'stefan', height: 195});
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
@@ -38,6 +42,6 @@ pokemonRepository.getAll().forEach(function(item) {
     }else{
         document.write('<li>'+'<h1>' + item.name +'</h1>' + '<p>' +' Height: '+ item.height + '</p>' +'</li>');
     }
-})
+});
 
 document.write('</ul');  // closed the </ul> here so that it will wrap all the <li> elements
