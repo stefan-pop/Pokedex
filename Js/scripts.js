@@ -7,11 +7,12 @@ let pokemonRepository = (function() {
     ]
 
     function add(pokemon) {
-        if( typeof(pokemon) !== 'object') {
-            alert('Please insert an object');
-            pokemon = null;
-        }
-        pokemonList.push(pokemon);
+        if( typeof(pokemon) === 'object') {
+            let pokeomnProperties = Object.keys(pokemon);
+            if( pokeomnProperties.includes('name', 0) && pokeomnProperties.includes('height', 1)){
+                pokemonList.push(pokemon);
+            }
+        }    
     }
 
     function getAll() {
