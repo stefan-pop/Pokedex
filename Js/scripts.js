@@ -4,7 +4,7 @@ let pokemonRepository = (function() {
         {name: 'Weedle', height: 3, types: ['bug','poison']},
         {name: 'Golbat', height: 16, types: ['poison','flying']},
         {name: 'Doduo', height: 14, types: ['flying','normal'] }
-    ]
+    ];
 
     function add(pokemon) {
         if( typeof(pokemon) === 'object') {
@@ -25,7 +25,7 @@ let pokemonRepository = (function() {
     return {
         add: add,
         getAll: getAll
-    }
+    };
 })();
 
 // 'forEach' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
