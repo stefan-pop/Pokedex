@@ -29,7 +29,6 @@ let pokemonRepository = (function() {
 // than 16, it will also add the 'highlightNote' variable.
 
 let highlightNote = " -Wow that's big!";
-let searchPokemon = '';
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
@@ -41,9 +40,4 @@ pokemonRepository.getAll().forEach(function(item) {
     }
 })
 
-pokemonRepository.getAll().filter(function(item) {
-    if( searchPokemon === item.name) {
-        return document.write('<li>'+'<h1>' + item.name +'</h1>' + '<p>' +' Height: '+ item.height + '</p>' +'</li>');
-    }
-})
 document.write('</ul');  // closed the </ul> here so that it will wrap all the <li> elements
