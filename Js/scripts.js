@@ -9,7 +9,7 @@ let pokemonRepository = (function() {
     function add(pokemon) {
         if( typeof(pokemon) === 'object') {
             let pokeomnProperties = Object.keys(pokemon);
-            if( pokeomnProperties.includes('name', 0) && pokeomnProperties.includes('height', 1)){
+            if( pokeomnProperties.includes('name', 0) && pokeomnProperties.includes('height', 1) && pokeomnProperties.includes('types', 2)){
                 pokemonList.push(pokemon);
                 console.log('Pokemon successfully added');
             }
