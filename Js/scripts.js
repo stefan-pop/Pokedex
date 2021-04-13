@@ -32,7 +32,6 @@ let pokemonRepository = (function() {
 // than 16, it will also add the 'highlightNote' variable.
 
 let highlightNote = " -Wow that's big!";
-pokemonRepository.add({name: 'stefan', height: 195});
 
 document.write('<ul class="pokemon-list">');  // created a <ul> that will contain the <li> created by if else statements
 
