@@ -5,46 +5,54 @@
 }
 
 body {
-    background-color: rgb(145, 233, 233);
+  background-color: rgba(0,0,0,0.1);
 }
 
-.pokemon-list {
+.container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    max-width: 800px;
+    max-width: 700px;
     width: 100%;
-    list-style-type: none;
-    margin: 0 auto;
-}
-
-.pokemon-list li {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 10px 10px;
-    min-height: 150px;
-    background-color: rgb(245, 240, 240);
-    color: rgb(34, 33, 33);
+    height: 70vh;
+    overflow: hidden;
     border-radius: 10px;
-    font-size: 18px;
+    background-color: rgb(145, 233, 233);
     box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
 }
 
-.pokemon-list li h1 {
-    text-transform: uppercase;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.container h1 {
+  padding: 5px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 4px solid orangered;
 }
 
-.pokemon-list li p {
-    font-size: 22px;
-    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+.pokemon-list {
+  list-style-type: none;
+  
+  height: 100%;
+  overflow: auto;
+  padding: 0 10px;
 }
 
-@media all and (max-width: 550px) {
-    .pokemon-list li {
-        font-size: 12px;
-    }
+.pokemon-list li{
+  margin-top: 15px;
+    
+}
+.pokemon-list li button {
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
+  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 28px;
+  text-align: left;
+  cursor: pointer;
+  
 }
