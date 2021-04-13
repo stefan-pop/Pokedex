@@ -43,10 +43,4 @@ let pokemonRepository = (function() {
     };
 })();
 
-// 'forEach' loop that iterates through the list and returns the 'name' and the 'height' of each object in the list. If the height of an object is greater
-// than 16, it will also add the 'highlightNote' variable.
-
-
-
-pokemonRepository.getAll().forEach(function(item) {
 });
