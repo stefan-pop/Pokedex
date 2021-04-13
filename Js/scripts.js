@@ -44,4 +44,5 @@ let pokemonRepository = (function() {
     };
 })();
 
+pokemonRepository.getAll().forEach(function(item) { 
 });
