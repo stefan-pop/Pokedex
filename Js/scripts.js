@@ -7,14 +7,10 @@ let pokemonRepository = (function() {
     ];
 
     function add(pokemon) {
-        if (typeof(pokemon) === 'object') {
-            let pokeomnProperties = Object.keys(pokemon);
-            if (pokeomnProperties.includes('name', 0) && pokeomnProperties.includes('height', 1) && pokeomnProperties.includes('types', 2)) {
-                pokemonList.push(pokemon);
-                console.log('Pokemon successfully added');
-            }
-        } else {
-            console.warn("The pokemon couldn't be added ! Please insert an object with both the 'name' and the 'height' of the pokemon in this order.");
+        if( typeof pokemon === 'object' && 'name' in pokemon && 'height' in pokemon && 'types' in pokemon) {
+            pokemonList.push(pokemon);
+        }else {
+            console.warn('Pokemon introduced incorrectly');
         }
     }
 
