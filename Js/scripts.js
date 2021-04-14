@@ -17,13 +17,10 @@ let pokemonRepository = (function() {
     // creating the elements of the <ul> with Js.
 
     function addListItem(pokemon) {
-        //select the necessary elements.
         let pokemonUl = document.querySelector('.pokemon-list');
         let liItem = document.createElement('li');
         let button = document.createElement('button');
-        //setting the name for the button, the name of the objects in the pokemonList.
         button.innerText = pokemon.name;
-        // appending and adding the class that styles the buttons.
         button.classList.add('pokemon-button');
         pokemonUl.appendChild(liItem);
         liItem.appendChild(button);
