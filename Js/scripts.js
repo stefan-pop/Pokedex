@@ -25,27 +25,15 @@ let pokemonRepository = (function() {
         pokemonUl.appendChild(liItem);
         liItem.appendChild(button);
 
-        // calling the 'addEvent' function.
-        addEvent(button, function() {
-            showDetails(pokemon);
-        });
-
+        button.addEventListener('click', function() {
+            console.log(pokemon.name);
+        })
         // If statements that adds a <p> element if the height of a pokemon is greater than 16.
         if(pokemon.height >= 16) {
             paragraph = document.createElement('p');
             paragraph.innerText = " Wow, that's big!";
             liItem.appendChild(paragraph);
         }
-    }
-
-    // function that takes the 'button' and the 'showDetails' function as arguments.
-    // It adds an event listener to the button that is calling the 'showDetails' function.
-    function addEvent(button, showDetails) {
-        button.addEventListener('click', showDetails);
-    }
-
-    function showDetails(pokemon) {
-        console.log(pokemon.name);
     }
 
     function getAll() {
