@@ -33,7 +33,9 @@ let pokemonRepository = (function() {
         liItem.appendChild(button);
 
         // calling the 'addEvent' function.
-        addEvent(button, showDetails(pokemon));
+        addEvent(button, function() {
+            showDetails(pokemon);
+        });
     }
 
     // function that takes the 'button' and the 'showDetails' function as arguments.
