@@ -27,7 +27,6 @@ let pokemonRepository = (function() {
         })
     }
 
-
     function showDetails(x) {
         loadDetails(x).then(function() {
             console.log(x);
@@ -69,7 +68,8 @@ let pokemonRepository = (function() {
         add: add,
         getAll: getAll,
         addListItem: addListItem,
-        loadList: loadList
+        loadList: loadList,
+        loadDetails: loadDetails
     };
 })();
 
