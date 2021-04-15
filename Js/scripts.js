@@ -22,14 +22,16 @@ let pokemonRepository = (function() {
         liItem.appendChild(button);
 
         //adding an event to the button to display a pokemon when it is clicked.
-        button.addEventListener('click', function(){
+        button.addEventListener('click', function(event){
             showDetails(pokemon);
         })
     }
 
 
     function showDetails(x) {
-        console.log(x);
+        loadDetails(x).then(function() {
+            console.log(x);
+        });
     }
 
     function getAll() {
