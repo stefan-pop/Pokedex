@@ -57,6 +57,8 @@ let pokemonRepository = (function() {
     };
 })();
 
-pokemonRepository.getAll().forEach(function(item) {
-    pokemonRepository.addListItem(item);
-});
+pokemonRepository.loadList().then(function() {
+    pokemonRepository.getAll().forEach(function(item) {
+        pokemonRepository.addListItem(item);
+    });
+})
