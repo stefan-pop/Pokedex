@@ -25,13 +25,6 @@ let pokemonRepository = (function() {
         button.addEventListener('click', function(){
             showDetails(pokemon);
         })
-
-        // If statements that adds a <p> element if the height of a pokemon is greater than 16.
-        if(pokemon.height >= 16) {
-            paragraph = document.createElement('p');
-            paragraph.innerText = " Wow, that's big!";
-            liItem.appendChild(paragraph);
-        }
     }
 
 
