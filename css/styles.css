@@ -67,6 +67,7 @@ body {
     border: none;
     color: #fff;
     cursor: pointer;
+    text-transform: capitalize;
 }
 
 .pokemon-list li p {
