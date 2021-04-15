@@ -43,10 +43,24 @@ let pokemonRepository = (function() {
         return pokemonList;
     }
 
+    function loadList() {
+        return fetch(apiUrl).then(function(response) {
+            return response.json();
+        }).then(function(json) {
+            json.results.forEach(function(item) {
+                let list = { name: item.name, detailsUrl: item.url}
+                add(list);
+            })
+        }).catch(function(error) {
+            console.log(error);
+        })
+    }
+
     return {
         add: add,
         getAll: getAll,
-        addListItem: addListItem
+        addListItem: addListItem,
+        loadList: loadList
     };
 })();
 
