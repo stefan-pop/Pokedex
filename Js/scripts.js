@@ -114,6 +114,12 @@ let pokemonRepository = (function() {
         modalContainer.classList.remove('is-visible');
     }
 
+    window.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
+            hideModal();
+        }
+    })
+
     return {
         add: add,
         getAll: getAll,
