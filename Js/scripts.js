@@ -96,6 +96,9 @@ let pokemonRepository = (function() {
         modal.appendChild(modalParagraph);
         modal.appendChild(modalImage);
         modalContainer.appendChild(modal);
+
+        //adding the .is-visible class to show and style the modal
+        modalConatiner.classList.add('is-visible')
     }
 
     return {
