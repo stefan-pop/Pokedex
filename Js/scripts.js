@@ -77,6 +77,7 @@ let pokemonRepository = (function() {
         let closeButton = document.createElement('button');
         closeButton.classList.add('modal-close');
         closeButton.innerText = 'Close';
+        closeButton.addEventListener('click', hideModal);
 
         //creating the title of the modal that will hold the name of the pokemon
         modalTitle = document.createElement('h1');
@@ -99,6 +100,10 @@ let pokemonRepository = (function() {
 
         //adding the .is-visible class to show and style the modal
         modalConatiner.classList.add('is-visible')
+    }
+
+    function hideModal() {
+        modalContainer.classList.remove('is-visible');
     }
 
     return {
