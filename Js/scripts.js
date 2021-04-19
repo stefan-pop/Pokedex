@@ -30,7 +30,7 @@ let pokemonRepository = (function() {
 
     function showDetails(pokemonObject) {
         loadDetails(pokemonObject).then(function() {
-            let title = ` Name: ${pokemonObject.name}`;
+            let title = pokemonObject.name;
             let text = ` Height: ${pokemonObject.height}`;
             let image = pokemonObject.imageUrl;
             //adding an if statment that adds some extra text if the height of a pokemon exceeds a size
