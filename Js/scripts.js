@@ -1,7 +1,7 @@
 let pokemonRepository = (function() {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150/';
-    let modalConatiner = document.querySelector('#modal-container');
+    let modalContainer = document.querySelector('#modal-container');
 
     function add(pokemon) {
         if( typeof pokemon === 'object' && 'name' in pokemon) {
@@ -28,9 +28,17 @@ let pokemonRepository = (function() {
         })
     }
 
-    function showDetails(x) {
-        loadDetails(x).then(function() {
-            console.log(x);
+    function showDetails(pokemonObject) {
+        loadDetails(pokemonObject).then(function() {
+            let title = ` Name: ${pokemonObject.name}`;
+            let text = ` Height: ${pokemonObject.height}`;
+            let image = pokemonObject.imageUrl;
+            //adding an if statment that adds some extra text if the height of a pokemon exceeds a size
+            let highlightNote = ' --Wow, that\'s big!';
+            if (pokemonObject.height > 16) {
+                text = ` Height: ${pokemonObject.height}  ${ highlightNote} `;
+            }
+            showModal(title, text, image);
         });
     }
 
@@ -68,7 +76,7 @@ let pokemonRepository = (function() {
     // Creating the modal that will display details of each pokemon item (name,height,image )
     function showModal(title, text, image) {
         //deleting everything inside the modal container each time the function runs from the beginnig
-        modalConatiner.innerHTML = '';
+        modalContainer.innerHTML = '';
 
         let modal = document.createElement('div');
         modal.classList.add('modal');
@@ -99,7 +107,7 @@ let pokemonRepository = (function() {
         modalContainer.appendChild(modal);
 
         //adding the .is-visible class to show and style the modal
-        modalConatiner.classList.add('is-visible')
+        modalContainer.classList.add('is-visible')
     }
 
     function hideModal() {
