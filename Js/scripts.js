@@ -2,7 +2,7 @@ let pokemonRepository = (function() {
     let pokemonList = [];
     let apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150/';
     let modalConatiner = document.querySelector('#modal-container');
-    
+
     function add(pokemon) {
         if( typeof pokemon === 'object' && 'name' in pokemon) {
             pokemonList.push(pokemon);
@@ -63,6 +63,39 @@ let pokemonRepository = (function() {
         }).catch(function(error) {
             console.log(error);
         })
+    }
+
+    // Creating the modal that will display details of each pokemon item (name,height,image )
+    function showModal(title, text, image) {
+        //deleting everything inside the modal container each time the function runs from the beginnig
+        modalConatiner.innerHTML = '';
+
+        let modal = document.createElement('div');
+        modal.classList.add('modal');
+
+        //creating the close button of the modal
+        let closeButton = document.createElement('button');
+        closeButton.classList.add('modal-close');
+        closeButton.innerText = 'Close';
+
+        //creating the title of the modal that will hold the name of the pokemon
+        modalTitle = document.createElement('h1');
+        modalTitle.innerText = title;
+
+        //creating a paragraph that will hold the height of the pokemon
+        let modalParagraph = document.createElement('p');
+        modalParagraph.innerText = text;
+
+        //creating an image element that will hold the image of the pokemon
+        let modalImage = document.createElement('img');
+        modalImage.src = image;
+
+        //appending the created elemets accordingly
+        modal.appendChild(closeButton);
+        modal.appendChild(modalTitle);
+        modal.appendChild(modalParagraph);
+        modal.appendChild(modalImage);
+        modalContainer.appendChild(modal);
     }
 
     return {
