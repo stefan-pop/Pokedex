@@ -36,13 +36,22 @@ let pokemonRepository = (function() {
 
     function showDetails(pokemonObject) {
         loadDetails(pokemonObject).then(function() {
-            let title = pokemonObject.name;
-            let text = ` Height: ${pokemonObject.height}`;
-            let image = pokemonObject.imageUrl;
-            //adding an if statment that adds some extra text if the height of a pokemon exceeds a size
-            let highlightNote = ' --Wow, that\'s big!';
-            if (pokemonObject.height > 16) {
-                text = ` Height: ${pokemonObject.height}  ${ highlightNote} `;
+            let modalTitle = document.querySelector('.modal-title');
+            let pokemonHeight = document.querySelector('#height');
+            modalTitle.innerText = pokemonObject.name.toUpperCase();
+            let pokemonImage = document.querySelector('#pokemon-image');
+            pokemonImage.src = pokemonObject.imageUrl;
+            pokemonHeight.innerText = `Height: ${pokemonObject.height}`;
+            let wow = document.createElement('span');
+            wow.innerText = ' -- Wow that\'s a big Pokemon!';
+            wow.style.color = "orangered";
+            wow.classList.add('fw-bold');
+
+            if( pokemonObject.height > 19) {
+                pokemonHeight.appendChild(wow);
+            }else {
+                wow.innerText = '-- That\'s a small Pokemon!';
+                pokemonHeight.appendChild(wow);
             }
         });
     }
