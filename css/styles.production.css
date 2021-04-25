@@ -1,0 +1,82 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+body {
+    background: -webkit-gradient(linear, left top, right top, from(rgba(39, 39, 39, 0.9)), to(rgba(39, 39, 39, 0.3)));
+    background: -o-linear-gradient(left, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+    background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:  rgb(190, 183, 183);
+    border-radius:20%;
+}
+
+#search-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto 4px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#272727;
+    overflow: hidden;
+}
+
+#title {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#input {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px 5px;
+    height: 35px;
+    width: 100%;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 300px;
+            flex: 0 1 300px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;  
+}
+
+.list-group {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    -webkit-box-shadow:  4px 3px 19px 0 rgb(0, 0, 0, 0.7);
+            box-shadow:  4px 3px 19px 0 rgb(0, 0, 0, 0.7);
+    background-color: #272727;
+    padding: 0 10px;
+    border-top: 10px solid #272727;
+    border-bottom: 10px solid #272727;
+}
+
+.list-group-item {
+    text-transform: capitalize;
+}
