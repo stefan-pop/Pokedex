@@ -9,6 +9,27 @@
     <title>Pokedex App</title>
 </head>
 <body>
+
+        <!-- Bootstrap Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h4 class="modal-title" id="exampleModalLabel">Modal title</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-white bg-dark">
+                <img src="" alt="pokemon image" class="rounded" id='pokemon-image'>
+                <p id="height"></p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!--End of modal-->
+
     <div class="container">
         <h1>Pokedex</h1>
         <ul class="pokemon-list"></ul>
