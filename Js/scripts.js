@@ -56,6 +56,22 @@ let pokemonRepository = (function() {
         });
     }
 
+    function searchPokemon(list) {
+        let input = document.querySelector('#input');
+        input.addEventListener('keyup', (e) => {
+           let updatedUl = document.querySelector('.list-group');
+           updatedUl.innerHTML = '';
+           let inputValue = e.target.value.trim();
+           list.forEach( i => {
+               if( i.name.includes(inputValue.toLowerCase())) {  
+                   addListItem(i);     
+               }
+           })
+       })
+    }
+
+    searchPokemon(pokemonList);
+
     function getAll() {
         return pokemonList;
     }
