@@ -1,0 +1,60 @@
+body {
+    background: linear-gradient(to right, rgba(39, 39, 39, 0.9), rgba(39, 39, 39, 0.3));
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color:  rgb(190, 183, 183);
+    border-radius:20%;
+}
+
+#search-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 700px;
+    width: 100%;
+    margin: 30px auto 4px auto;
+    padding: 10px;
+    border-radius: 10px;
+    background-color:#272727;
+    overflow: hidden;
+}
+
+#title {
+    color: #fff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#input {
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 3px 5px;
+    height: 35px;
+    width: 100%;
+    flex: 0 1 300px;
+    align-self: center;  
+}
+
+.list-group {
+    height: calc(100vh - 150px);
+    overflow-y: auto;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+    box-shadow:  4px 3px 19px 0 rgb(0, 0, 0, 0.7);
+    background-color: #272727;
+    padding: 0 10px;
+    border-top: 10px solid #272727;
+    border-bottom: 10px solid #272727;
+}
+
+.list-group-item {
+    text-transform: capitalize;
+}
