@@ -13,15 +13,20 @@ let pokemonRepository = (function() {
     // creating the elements of the <ul> with Js.
 
     function addListItem(pokemon) {
-        let pokemonUl = document.querySelector('.pokemon-list');
+        let pokemonUl = document.querySelector('.list-group');
         let liItem = document.createElement('li');
         let button = document.createElement('button');
         button.innerText = 'Show details';
         let pokemonName = document.createElement('h4');
         pokemonName.innerText = pokemon.name;
-        button.classList.add('pokemon-button');
+        liItem.classList.add('list-group-item');
+        button.classList.add('btn');
+        button.classList.add('btn-info');
+        button.setAttribute('data-bs-toggle', 'modal');
+        button.setAttribute('data-bs-target', '#exampleModal');
         pokemonUl.appendChild(liItem);
         liItem.appendChild(button);
+        liItem.appendChild(pokemonName);
 
         //adding an event to the button to display a pokemon when it is clicked.
         button.addEventListener('click', function(event){
