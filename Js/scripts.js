@@ -70,8 +70,6 @@ let pokemonRepository = (function() {
        })
     }
 
-    searchPokemon(pokemonList);
-
     function getAll() {
         return pokemonList;
     }
@@ -108,7 +106,8 @@ let pokemonRepository = (function() {
         getAll: getAll,
         addListItem: addListItem,
         loadList: loadList,
-        loadDetails: loadDetails
+        loadDetails: loadDetails,
+        searchPokemon: searchPokemon
     };
 })();
 
@@ -116,4 +115,6 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function(item) {
         pokemonRepository.addListItem(item);
     });
-})
+});
+
+pokemonRepository.searchPokemon(pokemonRepository.getAll());
