@@ -17,7 +17,7 @@ let pokemonRepository = (function() {
         let liItem = document.createElement('li');
         let button = document.createElement('button');
         button.innerText = 'Show details';
-        let pokemonName = document.createElement('h4');
+        let pokemonName = document.createElement('h2');
         pokemonName.innerText = pokemon.name;
         liItem.classList.add('list-group-item');
         button.classList.add('btn');
