@@ -24,15 +24,16 @@ let pokemonRepository = (function() {
         button.classList.add('btn-info');
         button.setAttribute('data-bs-toggle', 'modal');
         button.setAttribute('data-bs-target', '#exampleModal');
-        pokemonUl.appendChild(liItem);
-        liItem.appendChild(button);
         liItem.appendChild(pokemonName);
+        liItem.appendChild(button);
+        pokemonUl.appendChild(liItem);
 
         //adding an event to the button to display a pokemon when it is clicked.
-        button.addEventListener('click', function(event){
-            showDetails(pokemon);
-        })
+         button.addEventListener('click', function(event){
+             showDetails(pokemon);
+         })
     }
+
 
     function showDetails(pokemonObject) {
         loadDetails(pokemonObject).then(function() {
@@ -62,7 +63,7 @@ let pokemonRepository = (function() {
            let updatedUl = document.querySelector('.list-group');
            updatedUl.innerHTML = '';
            let inputValue = e.target.value.trim();
-           list.forEach( i => {
+           list.forEach(function(i) {
                if( i.name.includes(inputValue.toLowerCase())) {  
                    addListItem(i);     
                }
@@ -99,7 +100,7 @@ let pokemonRepository = (function() {
         }).catch(function(error) {
             console.log(error);
         })
-    } 
+    }
 
     return {
         add: add,
@@ -115,6 +116,6 @@ pokemonRepository.loadList().then(function() {
     pokemonRepository.getAll().forEach(function(item) {
         pokemonRepository.addListItem(item);
     });
-});
+})
 
 pokemonRepository.searchPokemon(pokemonRepository.getAll());
