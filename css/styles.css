@@ -17,9 +17,10 @@ body {
     justify-content: space-between;
     max-width: 700px;
     width: 100%;
-    margin: 30px auto 4px auto;
+    margin: 20px auto -1px auto;
     padding: 10px;
-    border-radius: 10px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
     background-color:#272727;
     overflow: hidden;
 }
@@ -54,7 +55,7 @@ label {
 }
 
 .list-group {
-    height: calc(100vh - 130px);
+    height: calc(100vh - 120px);
     overflow-y: auto;
     max-width: 700px;
     width: 100%;
@@ -62,8 +63,8 @@ label {
     box-shadow:  4px 3px 19px 0 rgb(0, 0, 0, 0.7);
     background-color: #272727;
     padding: 0 10px;
-    border-top: 10px solid #272727;
-    border-bottom: 10px solid #272727;
+    /* border-top: 10px solid #272727;
+    border-bottom: 10px solid #272727; */
 }
 
 .list-group-item {
