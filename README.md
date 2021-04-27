@@ -1,7 +1,6 @@
 
 # Pokedex
 **Desctiption**
-
 * Small web application, made only with HTML, CSS and Javascript that loads data from an external API.
 
 **How it works**
@@ -14,3 +13,4 @@
 
 **Dependency**
 * Bootstrap 5.0.0
+* Since the app is using the last version of Bootstrap, Internet Explorer is not supported at all.
