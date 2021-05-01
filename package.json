@@ -1,0 +1,24 @@
+{
+  "name": "Pokedex",
+  "version": "1.0.0",
+  "description": "**Desctiption**",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.25.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stefan-pop/Pokedex.git"
+  },
+  "keywords": [],
+  "author": "Stefan Pop",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stefan-pop/Pokedex/issues"
+  },
+  "homepage": "https://github.com/stefan-pop/Pokedex#readme"
+}
